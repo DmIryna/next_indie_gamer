@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { LinkIcon, CheckIcon } from "@heroicons/react/20/solid"
 
-const ShareLinkButton = () => {
+function ShareLinkButton() {
   const [clicked, setClicked] = useState(false)
 
   const handleClick = () => {

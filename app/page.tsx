@@ -9,7 +9,7 @@ const Home = async () => {
   return (
     <>
       <Heading title="Indie Gamer" />
-      <p className="pb-3">Only the best indie games, reviewed by you</p>
+      <p className="pb-3">Only the best indie games, reviewed for you</p>
       <ul className="flex flex-col gap-4">
         {reviews.map((review, index) => (
           <li

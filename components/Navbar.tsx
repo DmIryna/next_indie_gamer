@@ -1,7 +1,7 @@
 import Link from "next/link"
 import NavLink from "./NavLink"
 
-const Navbar = () => {
+function Navbar() {
   return (
     <nav>
       <ul className="flex gap-4">

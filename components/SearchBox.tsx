@@ -1,12 +1,12 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Combobox } from "@headlessui/react"
 import { useRouter } from "next/navigation"
 import { useDebounce } from "use-debounce"
+import { Combobox } from "@headlessui/react"
 import { useIsClient } from "@/lib/hooks"
 
-const SearchBox = () => {
+function SearchBox() {
   const router = useRouter()
   const [reviews, setReviews] = useState([])
   const [query, setQuery] = useState("")
@@ -35,7 +35,7 @@ const SearchBox = () => {
   if (!useIsClient) return <input type="text" placeholder="Search" />
 
   return (
-    <div className="relative w-48">
+    <div className="relative w-40 sm:w-48">
       <Combobox onChange={handleChange}>
         <Combobox.Input
           placeholder="Search..."
@@ -45,7 +45,6 @@ const SearchBox = () => {
         />
         <Combobox.Options className="absolute bg-white py-1 w-full">
           {reviews.map((review) => {
-            console.log(review)
             return (
               <Combobox.Option key={review.game} value={review}>
                 {({ active }) => (

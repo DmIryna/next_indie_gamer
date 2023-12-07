@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
-import "./global.css"
-import Navbar from "../components/Navbar"
 import { exo2, orbitron } from "./fonts"
+import Navbar from "../components/Navbar"
+import "./global.css"
 
 interface RootLayoutProps {
   children: ReactNode
@@ -17,11 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${orbitron.variable} ${exo2.variable}`}>
-      <body className="px-4 py-2 flex flex-col min-h-screen bg-orange-50">
-        <header>
+      <body className=" flex flex-col min-h-screen bg-orange-50">
+        <header className="sticky top-0 z-10 p-4 bg-orange-100/80">
           <Navbar />
         </header>
-        <main className="py-3 grow">{children}</main>
+        <main className="py-3 grow  px-4 ">{children}</main>
         <footer className="text-center text-xs border-t py-3 text-slate-500">
           Game data and images courtesy of{" "}
           <a

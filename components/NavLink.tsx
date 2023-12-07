@@ -9,7 +9,7 @@ interface NavLinkProps {
   style?: string
 }
 
-const NavLink = ({ title, href, style }: NavLinkProps) => {
+function NavLink({ title, href, style }: NavLinkProps) {
   const pathName = usePathname()
 
   if (pathName === href) {
