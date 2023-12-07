@@ -4,3 +4,4 @@
 /.env
 scripts/*
 /prisma/*.db
+.vercel
