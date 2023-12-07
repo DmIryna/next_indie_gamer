@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react"
 import { useFormState } from "react-dom"
-import FormButton from "./FormButton"
 import { createCommentAction } from "@/app/reviews/[game]/actions"
+import FormButton from "./FormButton"
 
 function CommentForm({ title, slug }: { title: string; slug: string }) {
   const [formState, action] = useFormState(createCommentAction, { errors: {} })
